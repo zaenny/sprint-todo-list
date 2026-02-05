@@ -20,6 +20,11 @@ export const UpdateTodoSchema = z.object({
   isCompleted: z.boolean(),
 });
 
+export const DeleteResponseSchema = z.object({
+  message: z.string(),
+});
+
 export type Todo = z.infer<typeof TodoSchema>;
 export type CreateTodoDto = z.infer<typeof CreateTodoSchema>;
 export type UpdateTodoDto = z.infer<typeof UpdateTodoSchema>;
+export type DeleteResponse = z.infer<typeof DeleteResponseSchema>;
