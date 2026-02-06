@@ -20,10 +20,6 @@ const ButtonVariants = cva(
         large:
           'w-56 h-56 md:w-162 lg:w-168 text-sm md:text-base lg:text-lg [&_svg]:w-16 [&_svg]:h-16',
       },
-      state: {
-        default: 'bg-slate-300 text-black',
-        active: '',
-      },
     },
   },
 );
@@ -36,16 +32,9 @@ interface ButtonProps
   icon?: React.ReactNode;
 }
 
-const Button = ({
-  variant,
-  size,
-  children,
-  icon,
-  state,
-  ...props
-}: ButtonProps) => {
+const Button = ({ variant, size, children, icon, ...props }: ButtonProps) => {
   return (
-    <button className={cn(ButtonVariants({ variant, size, state }))} {...props}>
+    <button className={cn(ButtonVariants({ variant, size }))} {...props}>
       {icon}
       <span className="hidden text-base md:inline lg:text-lg">{children}</span>
     </button>
