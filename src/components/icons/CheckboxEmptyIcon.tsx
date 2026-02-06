@@ -3,7 +3,7 @@ interface CheckboxEmptyIconProps {
 }
 
 const CheckboxEmptyIcon = ({
-  className = 'w-8 h-8',
+  className = 'w-32 h-32',
 }: CheckboxEmptyIconProps) => (
   <svg className={className} viewBox="0 0 32 32" fill="none">
     <circle
