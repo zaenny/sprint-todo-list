@@ -3,17 +3,15 @@ import { cva, VariantProps } from 'class-variance-authority';
 import React, { ButtonHTMLAttributes } from 'react';
 
 const ButtonVariants = cva(
-  'flex items-center rounded-full gap-10 justify-center shadow-btn-dark border-2 border-slate-900',
+  'flex items-center rounded-full gap-10 justify-center border-slate-900',
   {
     variants: {
       variant: {
-        addDefault: 'bg-slate-300 text-slate-900',
-        addActive: 'bg-violet-600 text-white',
-        editDefault: 'bg-slate-300 text-slate-900',
-        editActive: 'bg-lime-300 text-slate-900',
-        checkEmpty: '',
-        checkChecked: '',
-        delete: 'bg-rose-500 text-white',
+        addDefault: 'bg-slate-300 text-slate-900 shadow-btn-dark border-2',
+        addActive: 'bg-violet-600 text-white shadow-btn-dark border-2',
+        editDefault: 'bg-slate-300 text-slate-900 shadow-btn-dark border-2',
+        editActive: 'bg-lime-300 text-slate-900 shadow-btn-dark border-2',
+        delete: 'bg-rose-500 text-white shadow-btn-dark border-2',
       },
       size: {
         small: 'w-56 h-56',
