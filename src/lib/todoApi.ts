@@ -3,7 +3,7 @@
  * 할 일 목록 CRUD 기능 제공
  */
 import { apiClient } from '@/lib/api';
-import type { Todo, CreateTodoDto, UpdateTodoDto } from '@/type/todo';
+import type { Todo, CreateTodoDto, UpdateTodoDto } from '@/types/todo';
 
 /**
  * 전체 todo 조회
