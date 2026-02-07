@@ -4,7 +4,7 @@ import { InputHTMLAttributes } from 'react';
 import CheckboxCheckedIcon from '../icons/CheckboxCheckedIcon';
 import CheckboxEmptyIcon from '../icons/CheckboxEmptyIcon';
 
-const CheckListItemVariants = cva(
+const TodoItemVariants = cva(
   'flex rounded-full border-2 px-24 items-center gap-16',
   {
     variants: {
@@ -24,22 +24,22 @@ const CheckListItemVariants = cva(
   },
 );
 
-interface CheckListItemProps
+interface TodoItemProps
   extends
     Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>,
-    VariantProps<typeof CheckListItemVariants> {
+    VariantProps<typeof TodoItemVariants> {
   isCompleted?: boolean;
 }
 
-const CheckListItem = ({
+const TodoItem = ({
   variant,
   size,
   value,
   isCompleted = false,
   ...props
-}: CheckListItemProps) => {
+}: TodoItemProps) => {
   return (
-    <div className={cn(CheckListItemVariants({ variant, size }))} {...props}>
+    <div className={cn(TodoItemVariants({ variant, size }))} {...props}>
       <button type="button">
         {isCompleted ? <CheckboxCheckedIcon /> : <CheckboxEmptyIcon />}
       </button>
@@ -48,4 +48,4 @@ const CheckListItem = ({
   );
 };
 
-export default CheckListItem;
+export default TodoItem;
