@@ -1,2 +1,7 @@
 @import 'tailwindcss';
 @config '../../tailwind.config.ts';
+
+body {
+  font-family: 'NanumSquare', sans-serif;
+  font-size: 16px;
+}
