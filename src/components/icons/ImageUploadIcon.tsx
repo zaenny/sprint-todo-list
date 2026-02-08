@@ -2,7 +2,7 @@ interface ImageUploadIconProps {
   className?: string;
 }
 
-const ImageUploadIcon = ({ className = 'w-6 h-6' }: ImageUploadIconProps) => (
+const ImageUploadIcon = ({ className = 'w-18 h-18' }: ImageUploadIconProps) => (
   <svg className={className} viewBox="0 0 24 24" fill="none">
     <path
       d="M3 12L21 12"

@@ -31,6 +31,7 @@ const TodoList = ({ variant, items, onToggle, onNameClick }: TodoListProps) => {
               id={item.id}
               name={item.name}
               isCompleted={item.isCompleted}
+              variant={item.isCompleted ? 'done' : 'todo'}
               onToggle={() => onToggle(item.id)}
               onNameClick={() => onNameClick(item.id)}
             />
