@@ -59,14 +59,13 @@ const TodoDetail = ({
       <div className="mt-24 flex flex-col gap-24 lg:flex-row">
         <ImageSection
           className="h-full w-full lg:w-2/5"
-          imageUrl={originalTodo.imageUrl}
+          imageUrl={editedTodo.imageUrl}
           onImageChange={onImageChange}
         />
         <MemoSection
           className="h-full w-full lg:w-3/5"
           memo={editedTodo.memo}
           onChange={onMemoChange}
-          disabled={hasChanges}
         />
       </div>
       <div className="mt-16 flex justify-center gap-16 lg:justify-end">
