@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/layout/Header';
+import { ReactQueryClientProvider } from './provider/ReactQueryClientProvider';
 
 export const metadata: Metadata = {
   title: 'do it',
@@ -20,13 +21,15 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="">
-        <div className="">
-          <Header />
-          <main className="w-full">
-            <div className="mx-auto mt-24 max-w-1200 px-16">{children}</div>
-          </main>
-        </div>
+      <body>
+        <ReactQueryClientProvider>
+          <div>
+            <Header />
+            <main className="w-full">
+              <div className="mx-auto mt-24 max-w-1200 px-16">{children}</div>
+            </main>
+          </div>
+        </ReactQueryClientProvider>
       </body>
     </html>
   );
