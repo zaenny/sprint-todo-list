@@ -1,12 +1,10 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
 
 const Header = () => {
   return (
-    <header className="bg-white px-16">
+    <header className="border-b border-slate-200 bg-white px-16">
       <div className="mx-auto flex h-60 items-center md:max-w-1200">
-        <Link href="/" className="cursor-pointer">
+        <a href="/" className="cursor-pointer">
           <Image
             src="/image/logo-sm.png"
             alt="do it log"
@@ -23,7 +21,7 @@ const Header = () => {
             height={40}
             priority
           />
-        </Link>
+        </a>
       </div>
     </header>
   );
