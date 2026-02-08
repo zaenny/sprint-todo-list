@@ -10,7 +10,7 @@ const Header = () => {
           <Image
             src="/image/logo-sm.png"
             alt="do it log"
-            className="bolock md:hidden"
+            className="block md:hidden"
             width={71}
             height={40}
             priority
