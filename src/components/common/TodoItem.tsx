@@ -1,49 +1,49 @@
 import { cn } from '@/lib/utils';
-import { cva, VariantProps } from 'class-variance-authority';
-import { InputHTMLAttributes } from 'react';
+import { cva } from 'class-variance-authority';
 import CheckboxCheckedIcon from '../icons/CheckboxCheckedIcon';
 import CheckboxEmptyIcon from '../icons/CheckboxEmptyIcon';
 
 const TodoItemVariants = cva(
-  'flex rounded-full border-2 px-24 items-center gap-16',
+  'flex rounded-full border-2 px-12 items-center w-full h-50 text-slate-800',
   {
     variants: {
       variant: {
         todo: '',
-        done: 'bg-violet-100',
-      },
-      size: {
-        small: 'w-344 md:w-696 lg:w-588 h-50 text-slate-800',
-        large: 'w-343 md:w-696 lg:w-996 h-64 text-salte-900',
+        done: 'bg-violet-100 line-through',
       },
     },
     defaultVariants: {
-      size: 'small',
       variant: 'todo',
     },
   },
 );
 
-interface TodoItemProps
-  extends
-    Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>,
-    VariantProps<typeof TodoItemVariants> {
-  isCompleted?: boolean;
+interface TodoItemProps {
+  id: number;
+  name: string;
+  isCompleted: boolean;
+  onToggle?: () => void;
+  onNameClick?: () => void;
 }
 
 const TodoItem = ({
-  variant,
-  size,
-  value,
-  isCompleted = false,
-  ...props
+  name,
+  isCompleted,
+  onToggle,
+  onNameClick,
 }: TodoItemProps) => {
   return (
-    <div className={cn(TodoItemVariants({ variant, size }))} {...props}>
-      <button type="button">
+    <div
+      className={cn(
+        TodoItemVariants({ variant: isCompleted ? 'done' : 'todo' }),
+      )}
+    >
+      <button type="button" onClick={onToggle}>
         {isCompleted ? <CheckboxCheckedIcon /> : <CheckboxEmptyIcon />}
       </button>
-      <span>{value}</span>
+      <span className="ml-16 truncate" onClick={onNameClick}>
+        {name}
+      </span>
     </div>
   );
 };
