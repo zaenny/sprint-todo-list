@@ -2,11 +2,11 @@ import { cn } from '@/lib/utils';
 import { cva, VariantProps } from 'class-variance-authority';
 import React, { InputHTMLAttributes } from 'react';
 
-const TextFieldVariants = cva('flex rounded-full border-2', {
+const TextFieldVariants = cva('flex rounded-full border-2 w-full', {
   variants: {
     variant: {
       search: [
-        'w-280 md:w-518 lg:w-1016 h-56 bg-slate-100 shadow-btn-dark px-24',
+        ' h-56 bg-slate-100 shadow-btn-dark px-24',
         ' text-slate-800 placeholder:text-slate-500',
       ],
     },

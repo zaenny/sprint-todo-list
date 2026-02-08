@@ -7,7 +7,7 @@ const ButtonVariants = cva(
   {
     variants: {
       variant: {
-        addDefault: 'bg-slate-300 text-slate-900 shadow-btn-dark border-2',
+        addDefault: 'bg-slate-200 text-slate-900 shadow-btn-dark border-2',
         addActive: 'bg-violet-600 text-white shadow-btn-dark border-2',
         editDefault: 'bg-slate-300 text-slate-900 shadow-btn-dark border-2',
         editActive: 'bg-lime-300 text-slate-900 shadow-btn-dark border-2',
