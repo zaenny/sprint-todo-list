@@ -4,8 +4,8 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header className="w-full">
-      <div className="container mx-auto flex h-60 items-center md:max-w-1200">
+    <header className="bg-white px-16">
+      <div className="mx-auto flex h-60 items-center md:max-w-1200">
         <Link href="/" className="cursor-pointer">
           <Image
             src="/image/logo-sm.png"

@@ -20,11 +20,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>
-        <div className="px-16">
+      <body className="">
+        <div className="">
           <Header />
           <main className="w-full">
-            <div className="mx-auto max-w-1200">{children}</div>
+            <div className="mx-auto mt-24 max-w-1200 px-16">{children}</div>
           </main>
         </div>
       </body>
