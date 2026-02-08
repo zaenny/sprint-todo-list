@@ -16,11 +16,12 @@ const TodoForm = ({ inputValue, onChange, onSubmit }: TodoFormProps) => {
           placeholder="할 일을 입력하세요"
           name="name"
           variant="search"
+          value={inputValue}
           onChange={onChange}
         />
         <Button
           variant={inputValue.trim() ? 'addActive' : 'addDefault'}
-          size="large"
+          size="add"
           icon={<PlusIcon />}
         >
           추가하기
