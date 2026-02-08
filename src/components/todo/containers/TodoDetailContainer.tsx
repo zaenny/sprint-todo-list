@@ -118,8 +118,8 @@ const TodoDetailContainer = ({ id }: TodoDetailContainerProps) => {
         id: originalTodo.id,
         data: {
           name: editedTodo.name,
-          memo: editedTodo.memo,
-          imageUrl: editedTodo.imageUrl,
+          memo: editedTodo.memo ?? '',
+          imageUrl: editedTodo.imageUrl ?? '',
           isCompleted: editedTodo.isCompleted,
         },
       });
